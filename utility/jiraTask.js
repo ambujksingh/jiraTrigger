@@ -1,13 +1,13 @@
 const axios = require('axios');
 exports.initiateTrigger = async (url) => {
     try {
-        let response;
-        response = await axios.post(url, {
+        let result;
+        result = await axios.post(url, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-        return response
+        return result
     } catch (error) {
         console.log(error);
         throw error
